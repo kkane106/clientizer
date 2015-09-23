@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-md-2"></div>
-  <h2 class="col-md-3">Listing leads</h2>
+  <div class="col-md-1"></div>
+  <h2 class="col-md-3">Leads List</h2>
 </div>
 
 
@@ -11,8 +11,10 @@
       <th class="col-md-1">Phone</th>
       <th class="col-md-1">Url</th>
       <th class="col-md-1">Called</th>
-      <th class="col-md-1">Times called</th>
+      <th class="col-md-1">Calls</th>
       <th class="col-md-1">Caller</th>
+      <th class="col-md-1">Notes</th>
+      <th class="col-md-1">Updated</th>
       <th class="col-md-1"></th>
     </tr>
   </thead>
@@ -20,15 +22,16 @@
   <tbody>
     <% @leads.each do |lead| %>
       <tr class="row">
-        <td class="col-md-1"><%= lead.company %></td>
+        <td class="col-md-1"><%=link_to lead.company, lead %></td>
         <td class="col-md-1"><%= lead.phone %></td>
         <td class="col-md-1"><%= lead.url %></td>
         <td class="col-md-1"><%= lead.called %></td>
         <td class="col-md-1"><%= lead.times_called %></td>
         <td class="col-md-1"><%= lead.caller_id %></td>
-        <td class="col-md-1"><%= link_to 'Show', lead %></td>
+        <td class="col-md-1"><%= lead.notes %></td>
+        <td class="col-md-1"><%= lead.updated_at.strftime("%m/%d/%Y") %></td>
         <td class="col-md-1"><%= link_to 'Edit', edit_lead_path(lead) %></td>
-        <td class="col-md-1"><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="col-md-1"><%= link_to 'Delete', lead, method: :delete, data: { confirm: "Are you sure?\nThis contact will be deleted from the server."} %></td>
       </tr>
     <% end %>
   </tbody>
@@ -37,7 +40,6 @@
 <br>
 
 <div class="row">
-  <div class="col-md-2">
+  <div class="col-md-1"></div>
   <%= link_to 'New Lead', new_lead_path %>
-</div>
 </div>
