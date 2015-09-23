@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  phone: MyString
+  url: MyString
+  called: false
+  times_called: 1
+  caller_id: 1
+
+two:
+  company: MyString
+  phone: MyString
+  url: MyString
+  called: false
+  times_called: 1
+  caller_id: 1
