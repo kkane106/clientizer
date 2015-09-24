@@ -8,7 +8,7 @@
 
   <!-- User Authentification -->
 <% if @current_user %>
-	Signed in as <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+	Signed in as <%= @current_user.name %> | <%= link_to "logout", '/logout' %>
 <% else %>
 	<div class="row">
 		<div class="col-md-6">
