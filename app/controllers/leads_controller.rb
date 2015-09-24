@@ -1,5 +1,7 @@
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize
+  
 
   # GET /leads
   # GET /leads.json
