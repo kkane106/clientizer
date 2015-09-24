@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 # Add Bootstrap
 gem 'bootstrap-sass', '~>3.2.0'
@@ -40,3 +41,5 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Heroku dependency
+gem 'rails_12factor'
