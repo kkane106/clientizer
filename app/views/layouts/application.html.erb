@@ -5,20 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-	<!-- User Authentification -->
-	<% if @current_user %>
-		Signed in as <%= current_user.name %> | <%= link_to "logout", '/logout' %>
-	<% else %>
+
+  <!-- User Authentification -->
+<% if @current_user %>
+	Signed in as <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+<% else %>
 	<div class="row">
-		<div class="col-md-6"></div>
 		<div class="col-md-6">
-			<%= render "/sessions/html_form" %>
+			<!-- placeholder empty space -->
+		</div>
+		<div class="col-md-6">
+		<%= render "/sessions/html_form" %>
 		</div>
 	</div>
-	<% end %>
+<% end %>
 
+</head>
+<body>
 <%= yield %>
 
 </body>
