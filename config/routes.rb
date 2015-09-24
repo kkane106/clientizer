@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Root index
+  root 'leads#index'
+
+  # Leads routes
   resources :leads
 
   # Signup
